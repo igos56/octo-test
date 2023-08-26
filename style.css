@@ -21,6 +21,11 @@ a {
 body {
     font-family:'Noto Sans', sans-serif;
     font-weight: 400;
+    width: 100vw;
+}
+
+body > * {
+    width: 100%;
 }
 
 /* Centered container */
@@ -28,11 +33,6 @@ body {
     width: 1140px;
     margin-left: auto;
     margin-right: auto;
-}
-.container-flex {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
 }
 
 /* Hidden class */
@@ -53,7 +53,7 @@ body {
 .header {
     border: 1px solid rgba(255, 255, 255, 0);
     height: 396px;
-    background: url(./img/header-bg.jpg) center no-repeat;
+    background: url(./img/header-bg-lg.jpg) center no-repeat;
 }
 .header__title {
     width: 750px;
@@ -67,14 +67,17 @@ body {
     margin-right: auto;
 }
 
-/* Solutions Section */
+/* Solutions section */
 .solutions {
     background-color: var(--white);
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
-/* Card */
+.solutions-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 .solutions__card {
     position: relative;
     width: 360px;
@@ -83,8 +86,6 @@ body {
     border: 1px solid #D3D8E4;
     background-color: var(--white);
 }
-
-/* Badge */
 .category-badge {
     display: inline-block;
     height: 36px;
@@ -107,8 +108,6 @@ body {
     top: 12px;
     left: 0;
 }
-
-/* Card-image */
 .solutions__card__img {
     width: 300px;
     height: 170px;
@@ -126,8 +125,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
-/* Person-name */
 .solutions__card__person {
     font-size: 13px;
     line-height: 20px;
@@ -140,8 +137,6 @@ body {
 .solutions__card__person_deep-violet {
     color: var(--deep-violet);
 }
-
-/* Title */
 .solutions__card__title {
     margin-top: 6px;
     font-size: 22px;
@@ -150,8 +145,6 @@ body {
     width: 300px;
     font-weight: 400;
 }
-
-/* Info */
 .solutions__card__info {
     margin-top: 16px;
     font-size: 16px;
@@ -160,8 +153,6 @@ body {
     color: var(--custom-black);
     width: 300px;
 }
-
-/* Button */
 .btn {
     display: inline-block;
     padding: 9px 35px 11px;
@@ -180,4 +171,586 @@ body {
     position: absolute;
     bottom: 28px;
     left: 30px;
+}
+
+/* Contacts section */
+.contacts {
+    width: 100%;
+    padding: 100px 0;
+    background-color: var(--custom-black);
+}
+.contacts-wrapper {
+    display: flex;
+    align-items: center;
+}
+.contacts__info {
+    width: 555px;
+    margin-right: 127px;
+}
+.contacts__info__title {
+    font-size: 62px;
+    line-height: 68px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: var(--blue-light);
+}
+.contacts__info__text {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    margin-top: 22px;
+}
+.contacts__info__btn {
+    margin-top: 40px;
+}
+.btn_violet-border {
+    outline: 2px solid var(--blue-light);
+    outline-offset: -2px;
+}
+.btn-wrapper {
+    display: flex;
+    width: 336px;
+    justify-content: space-between;
+}
+.contacts-image {
+    width: 458px;
+    height: 380px;
+    background: url(./img/contacts1200p.jpg) center no-repeat;
+}
+
+/* Preview section */
+.preview {
+    padding: 100px 0;
+}
+.preview__slider__cards {
+    display: flex;
+    gap: 30px;
+}
+.btns-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.preview__btn {
+    width: 13px;
+    height: 26px;
+}
+.preview__btns__prev {
+    background: url(./img/slider-prev-btn.svg) center no-repeat;
+}
+.preview__btns__next {
+    background: url(./img/slider-next-btn.svg) center no-repeat;
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        width: 940px;
+    }
+    .header {
+        height: 340px;
+        width: 992px;
+        margin-left: auto;
+        margin-right: auto;
+        background: url(./img/header-bg-md.png) center no-repeat;
+    }
+    .header__title {
+        letter-spacing: 1.2px;
+        line-height: 60px;
+        font-size: 54px;
+        width: 617px;
+        margin-top: 100px;
+    }
+    .solutions {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .solutions__card {
+        width: 455px;
+        height: 470px;
+    }
+    .solutions__card:nth-child(2),
+    .solutions__card:nth-child(5) {
+        display: none;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__category-badge {
+        width: 208px;
+        font-size: 0;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__category-badge::before {
+        font-size: 13px;
+        content: "Category | Marketing";
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 16px;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__title {
+        font-size: 0;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__title::before {
+        font-size: 20px;
+        content: "Solutions for people like you like people";
+        display: inline-block;
+    }
+    .solutions__card:nth-child(6) > .solutions__card__category-badge {
+        background-color: var(--blue-light);
+        font-size: 0;
+        width: 208px;
+    }
+    .solutions__card:nth-child(6) > .solutions__card__category-badge::before {
+        font-size: 13px;
+        content: "Category | Marketing";
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 15px;
+    }
+    .solutions__card:nth-child(6) > .solutions__card__img {
+        background-color: var(--custom-black);
+    }
+    .solutions__card:nth-child(6) > .solutions__card__person {
+        color: var(--blue-light);
+    }
+    .solutions__card:nth-child(6) > .solutions__card__btn {
+        background-color: var(--blue-light);
+    }
+    .solutions__card__img {
+        width: 395px;
+    }
+    .solutions__card__title {
+        font-size: 20px;
+        line-height: 28px;
+        width: 395px;
+        height: 56px;
+    }
+    .solutions__card__info {
+        width: 395px;
+        font-size: 0;
+    }
+    .solutions__card__info::before {
+        display: inline-block;
+        width: 395px;
+        height: 52px;
+        font-size: 16px;
+        content: "How can we help your technology and services business develop a revenue engine based…";
+    }
+    .contacts {
+        padding: 80px 0;
+        width: 992px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contacts__info {
+        width: 455px;
+        margin-right: 30px;
+        padding-top: 10px;
+        padding-left: 1px;
+    }
+    .contacts__info__title {
+        font-size: 54px;
+        line-height: 60px;
+        letter-spacing: 1.2px;
+    }
+    .contacts__info__text {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 20px;
+    }
+    .btn-wrapper {
+        width: 316px;
+    }
+    .contacts__info__btn {
+        margin-top: 30px;
+        padding: 9px 30px 11px;
+    }
+    .contacts-image {
+        width: 455px;
+        height: 332px;
+        background: url(./img/contacts992p.jpg) center no-repeat;
+    }
+    .preview {
+        padding: 80px 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+    .header {
+        width: 770px;
+        height: 276px;
+        background: url(./img/header-bg-sm.png) center no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header__title {
+        letter-spacing: 1px;
+        line-height: 48px;
+        font-size: 46px;
+        width: 470px;
+        margin-top: 81px;
+        margin-left: 129px;
+    }
+    .solutions {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .solutions__card {
+        width: 345px;
+        height: 440px;
+        padding: 29px;
+    }
+    .category-badge {
+        padding: 5px 14px 7px;
+    }
+    .solutions__card__img {
+        width: 289px;
+        height: 150px;
+    }
+    .solutions__card__person {
+        font-size: 0;
+        margin-top: 18px;
+    }
+    .solutions__card__person::before {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        content: "Adam Sendler"
+    }
+    .solutions__card__title {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        width: 289px;
+        margin-top: 0px;
+    }
+    .solutions__card__category-badge {
+        width: 190px;
+        height: 32px;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__category-badge {
+        font-size: 0;
+        width: 190px;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__category-badge::before {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        content: "Category | Marketing";
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 15px;
+    }
+    .solutions__card:nth-child(6) > .solutions__card__category-badge {
+        font-size: 0;
+        width: 190px;
+    }
+    .solutions__card:nth-child(6) > .solutions__card__category-badge::before {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        content: "Category | Marketing";
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 15px;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__title::before {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
+    }
+    .solutions__card__info {
+        width: 289px;
+        font-size: 0;
+        margin-top: 9px;
+    }
+    .solutions__card__info::before {
+        display: inline-block;
+        width: 289px;
+        height: 66px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.6px;
+        content: "How can we help your technology and services business develop a revenue engine based…";
+    }
+    .btn {
+        padding: 9px 27px 10px;
+    }
+    .solutions__card__btn {
+        width: 140px;
+        height: 36px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        bottom: 26px;
+        left: 29px;
+    }
+    .contacts {
+        padding: 70px 0;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contacts-wrapper {
+        flex-direction: column;
+    }
+    .contacts__info {
+        width: 595px;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    .contacts__info__title {
+        font-size: 46px;
+        line-height: 48px;
+        letter-spacing: 1px;
+        width: 595px;
+        text-align: center;
+    }
+    .contacts__info__text {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-top: 14px;
+    }
+    .btn-wrapper {
+        width: 296px;
+    }
+    .contacts__info__btn {
+        width: 140px;
+        height: 36px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        padding-left: 28px;
+        padding-top: 9px;
+    }
+    .contacts-image {
+        margin-top: 40px;
+        width: 596px;
+        height: 364px;
+        background: url(./img/contacts768p.jpg) center no-repeat;
+    }
+    .preview {
+        padding: 60px 0;
+    }
+    .btns-wrapper {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 546px;
+    }
+    .header {
+        height: 236px;
+        width: 576px;
+        background: url(./img/header-bg-ssm.png) center no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header__title {
+        width: 450px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .solutions {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .solutions__card {
+        width: 258px;
+        height: 448px;
+        padding: 16px;
+        padding-left: 15px;
+    }
+    .solutions__card__img {
+        width: 226px;
+        height: 140px;
+    }
+    .solutions__card__person {
+        margin-top: 13px;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__person {
+        color: var(--blue-light);
+    }
+    .solutions__card__title {
+        font-size: 0;
+        width: 226px;
+        height: 104px;
+    }
+    .solutions__card__title::before {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        content: "Solutions for people like you like people solutions for people like you";
+        display: inline-block;
+    }
+    .solutions__card:nth-child(3) > .solutions__card__title::before {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        content: "Solutions for people like you like people solutions for people like you";
+        display: inline-block;
+    }
+    .solutions__card__info {
+        width: 226px;
+        font-size: 0px;
+        margin-top: 10px;
+    }
+    .solutions__card__info::before {
+        display: inline-block;
+        width: 226px;
+        height: 66px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.6px;
+        content: "How can we help your technology and services business develop…";
+    }
+    .solutions__card__btn {
+        padding-top: 9px;
+        padding-left: 28px;
+        bottom: 18px;
+        left: 15px;
+    }
+    .solutions__card__category-badge {
+        top: 0px;
+        left: -1px;
+    }
+    .contacts {
+        padding: 60px 0;
+        width: 576px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contacts__info {
+        width: 450px;
+    }
+    .contacts__info__title {
+        width: 450px;
+    }
+    .contacts-image {
+        width: 450px;
+        height: 275px;
+        background: url(./img/contacts576p.jpg) center no-repeat;
+    }
+    .preview {
+        padding: 50px 0;
+    }
+    .preview__slider__cards {
+        width: 546px;
+        height: 448px;
+    }
+    .btns-wrapper {
+        margin-top: 20px;
+        width: 42px;
+        height: 22px;
+    }
+    .preview__btn {
+        width: 11px;
+        height: 22px;
+    }
+    .preview__btns__next {
+        margin-left: 18px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        width: 290px;
+    }
+    .header {
+        height: 274px;
+        width: 320px;
+        background: url(./img/header-bg-xs.png) center no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header__title {
+        width: 290px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .solutions__card {
+        width: 298px;
+        height: 448px;
+        padding: 16px;
+    }
+    .solutions__card:nth-child(4),
+    .solutions__card:nth-child(6) {
+        display: none;
+    }
+    .solutions__card__img {
+        width: 258px;
+        height: 140px;
+    }
+    .solutions__card__title {
+        width: 258px;
+    }
+    .solutions__card__title::before {
+        content: "Solutions for people like you like people solutions for people like you like people";
+    }
+    .solutions__card:nth-child(3) > .solutions__card__title::before {
+        content: "Solutions for people like you like people solutions for people like you like people";
+    }
+    .solutions__card__info::before {
+        width: 258px;
+        font-size: 14px;
+        content: "How can we help your technology and services business develop a revenue engine based…";
+    }
+    .contacts {
+        padding: 50px 0;
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contacts__info {
+        width: 290px;
+        padding-top: 0;
+    }
+    .contacts__info__title {
+        width: 290px;
+    }
+    .btn-wrapper {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .contacts__info__btn {
+        width: 290px;
+        margin-top: 0;
+        text-align: center;
+    }
+    .contacts__info__btn:nth-child(2) {
+        margin-top: 16px;
+    }
+    .contacts-image {
+        margin-top: 30px;
+        width: 290px;
+        height: 146px;
+        background: url(./img/contacts575p.jpg) center no-repeat;
+    }
+    .preview__slider__cards > .solutions__card:nth-child(3) {
+        display: none;
+    }
+    .btns-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
