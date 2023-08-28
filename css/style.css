@@ -635,6 +635,10 @@ a {
         letter-spacing: 0.6px;
         content: "How can we help your technology and services business develop…";
     }
+    .btn {
+        padding-right: 0;
+        padding-left: 28px;
+    }
     .card__btn {
         padding-top: 9px; 
         padding-left: 28px;
