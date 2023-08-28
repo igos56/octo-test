@@ -758,6 +758,7 @@ a {
     .contacts__info__btn {
         width: 290px;
         margin-top: 0;
+        padding-left: 0;
         text-align: center;
     }
     .contacts__info__btn:nth-child(2) {
