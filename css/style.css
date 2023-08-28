@@ -638,6 +638,7 @@ a {
     .card__btn {
         padding-top: 9px; 
         padding-left: 28px;
+        padding-right: 0;
         bottom: 18px;
         left: 15px;
     }
