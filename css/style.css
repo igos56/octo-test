@@ -53,7 +53,7 @@ a {
 .header {
     border: 1px solid rgba(255, 255, 255, 0);
     height: 396px;
-    background: url(./img/header-bg-lg.jpg) center no-repeat;
+    background: url(../img/header-bg-lg.jpg) center no-repeat;
 }
 .header__title {
     width: 750px;
@@ -217,7 +217,7 @@ a {
 .contacts-image {
     width: 458px;
     height: 380px;
-    background: url(./img/contacts1200p.jpg) center no-repeat;
+    background: url(../img/contacts1200p.jpg) center no-repeat;
 }
 
 /* Preview section */
@@ -233,7 +233,7 @@ a {
     display: flex;
     gap: 30px;
     left: 0;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out .8s;
 }
 .preview__btns-wrapper {
     display: flex;
@@ -246,10 +246,10 @@ a {
     cursor: pointer;
 }
 .preview__btn__prev {
-    background: url(./img/slider-prev-btn.svg) center no-repeat;
+    background: url(../img/slider-prev-btn.svg) center no-repeat;
 }
 .preview__btn__next {
-    background: url(./img/slider-next-btn.svg) center no-repeat;
+    background: url(../img/slider-next-btn.svg) center no-repeat;
     margin-left: 25px;
 }
 
@@ -262,7 +262,7 @@ a {
         width: 992px;
         margin-left: auto;
         margin-right: auto;
-        background: url(./img/header-bg-md.png) center no-repeat;
+        background: url(../img/header-bg-md.png) center no-repeat;
     }
     .header__title {
         letter-spacing: 1.2px;
@@ -377,7 +377,7 @@ a {
     .contacts-image {
         width: 455px;
         height: 332px;
-        background: url(./img/contacts992p.jpg) center no-repeat;
+        background: url(../img/contacts992p.jpg) center no-repeat;
     }
     .preview {
         padding: 80px 0;
@@ -394,7 +394,7 @@ a {
     .header {
         width: 770px;
         height: 276px;
-        background: url(./img/header-bg-sm.png) center no-repeat;
+        background: url(../img/header-bg-sm.png) center no-repeat;
         margin-left: auto;
         margin-right: auto;
     }
@@ -552,7 +552,7 @@ a {
         margin-top: 40px;
         width: 596px;
         height: 364px;
-        background: url(./img/contacts768p.jpg) center no-repeat;
+        background: url(../img/contacts768p.jpg) center no-repeat;
     }
     .preview {
         padding: 60px 0;
@@ -572,7 +572,7 @@ a {
     .header {
         height: 236px;
         width: 576px;
-        background: url(./img/header-bg-ssm.png) center no-repeat;
+        background: url(../img/header-bg-ssm.png) center no-repeat;
         margin-left: auto;
         margin-right: auto;
     }
@@ -660,7 +660,7 @@ a {
     .contacts-image {
         width: 450px;
         height: 275px;
-        background: url(./img/contacts576p.jpg) center no-repeat;
+        background: url(../img/contacts576p.jpg) center no-repeat;
     }
     .preview {
         padding: 50px 0;
@@ -693,7 +693,7 @@ a {
     .header {
         height: 274px;
         width: 320px;
-        background: url(./img/header-bg-xs.png) center no-repeat;
+        background: url(../img/header-bg-xs.png) center no-repeat;
         margin-left: auto;
         margin-right: auto;
     }
@@ -761,7 +761,7 @@ a {
         margin-top: 30px;
         width: 290px;
         height: 146px;
-        background: url(./img/contacts575p.jpg) center no-repeat;
+        background: url(../img/contacts575p.jpg) center no-repeat;
     }
     .preview__slider__cards {
         width: 290px;
